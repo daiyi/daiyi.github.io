@@ -4,8 +4,9 @@ html {
 }
 
 body {
-  font-family: Courier New, Courier New, Courier6, monospace;
+  font-family: Courier New, Courier6, monospace;
   margin: 0;
+  color: #000;
 }
 
 .page {
@@ -116,16 +117,16 @@ p {
 a {
   text-decoration: none;
 }
-a:link {
-  color: #333333;
-  border-bottom: 1px #666666 dotted;
-}
-a:visited {
-  color: #666666;
+a:link, a:visited {
+  color: #333;
+  border-bottom: 1px #333 dotted;
 }
 a:hover {
-  text-decoration: none;
   border-bottom: 1px #666666 solid;
+}
+a.anchor {
+  border: none;
+  color: #000;
 }
 
 a.button {
