@@ -16,6 +16,34 @@ body {
   flex-direction: column;
 }
 
+.container {
+  margin: 0 20px;
+  max-width: 700px;
+}
+.container-fluid {
+  width: 100%;
+  position: relative;
+}
+
+.content .container {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 45px;
+}
+h1 small {
+  font-size: 20px;
+}
+h1 a:link, h1 a:visited, h1 a:hover {
+  color: #000000;
+  border: none;
+}
+
+h2 {
+  font-size: 20px;
+}
+
 .header {
   display: flex;
   align-self: flex-start;
@@ -25,21 +53,56 @@ body {
   width: 100%;
   position: absolute;
   top: 0px;
-  height: 530px; /* height of bg image */
-  background-image: url('./octoswirl_sm.png');
+  height: 240px; /* height of bg image */
+  background-image: url('./octoswirl_xs.png');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: auto;
   z-index: -1;
 }
-@media (min-width: 800px) {
-  .header-image {
-    background-image: url('./octoswirl.png');
-  }
-}
 .header-content {
   margin: auto;
-  margin-top: 220px;
+  margin-top: 20px;
+}
+.header-content h1 {
+  padding-left: 20px;
+}
+@media (min-width: 450px) {
+  .header-image {
+    height: 300px; /* height of bg image */
+    background-image: url('./octoswirl_sm.png');
+  }
+  .header-content {
+    margin-top: 120px;
+  }
+  .header-content h1 {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 580px) {
+  .header-content {
+    width: 520px;
+  }
+}
+
+@media (min-width: 800px) {
+  .header-image {
+    height: 530px; /* height of bg image */
+    background-image: url('./octoswirl.png');
+  }
+  .header-content {
+    margin: auto;
+    margin-top: 220px;
+    width: auto;
+  }
+  h2 {
+    font-size: 28px;
+  }
+
+  .container {
+    width: 700px;
+  }
 }
 
 .content {
@@ -69,38 +132,6 @@ body {
   .footer-image {
     background-image: url('./octofoot.png');
   }
-}
-
-.container {
-  margin: 0 20px;
-  max-width: 700px;
-}
-.container-fluid {
-  width: 100%;
-  position: relative;
-}
-
-.content .container {
-  margin-bottom: 40px;
-}
-
-h1 {
-  font-size: 45px;
-}
-h1 small {
-  font-size: 20px;
-}
-h1 a:link, h1 a:visited, h1 a:hover {
-  color: #000000;
-  border: none;
-}
-
-h2 {
-  font-size: 28px;
-}
-h2 small {
-  font-weight: normal;
-  font-size: 20px;
 }
 
 p {
