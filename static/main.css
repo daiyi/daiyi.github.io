@@ -160,6 +160,10 @@ a.button:hover {
   padding-inline-start: 0;
 }
 
+p + .link-list {
+  margin-top: -10px;
+}
+
 .link-list {
   display: block;
   padding-inline-start: 20px;
@@ -224,6 +228,10 @@ h2+figure {
   }
   .portfolio .content {
     margin-top: 0;
+  }
+  .link-list {
+    padding-inline-start: 0;
+    margin-left: -10px;
   }
 }
 
