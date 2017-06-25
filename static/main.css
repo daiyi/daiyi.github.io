@@ -36,6 +36,10 @@ h1 {
   display: inline;
   padding: 5px 10px 0 10px;
 }
+h1.inverse {
+  color: #000;
+  background: none;
+}
 h1 small {
   font-size: 20px;
 }
@@ -48,9 +52,15 @@ h2 {
   font-size: 20px;
 }
 
+h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .4em;
+  color: #888;
+}
 .subtitle-inline {
   margin-right: 12px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
 }
 
@@ -172,7 +182,7 @@ p + .link-list {
   display: block;
   padding-inline-start: 20px;
 }
-.link-list li {
+.link-list li, .blacklink {
   background: #000;
   color: #999;
   display: inline-block;
@@ -203,6 +213,35 @@ h2+figure {
   border-bottom: 1px #aaa dotted;
 }
 
+.projects {
+  margin: 0 -5px;
+}
+.project {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  padding: 5px;
+  filter: grayscale(100%) invert();
+  color: #9b9b9b;
+  margin-bottom: 30px;
+}
+.project:hover {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: none;
+  color: #ccc;
+  background: #222;
+  -webkit-box-shadow: 0px 0px 0px 10px #222;
+  -moz-box-shadow: 0px 0px 0px 10px #222;
+  box-shadow: 0px 0px 0px 10px #222;
+}
+.project img {
+  margin-top: 0;
+  display: block;
+}
+.project p {
+  line-height: 1.2em;
+}
+
 @media (min-width: 450px) {
   .header-image {
     height: 300px; /* height of bg image */
@@ -210,12 +249,6 @@ h2+figure {
   }
   .header-content {
     margin-top: 120px;
-  }
-}
-
-@media (max-width: 450px) {
-  .portfolio .header-image {
-    background: none;
   }
 }
 
@@ -228,11 +261,34 @@ h2+figure {
     font-size: 14px;
   }
   .portfolio .content {
-    margin-top: 0;
+    margin-top: 20px;
   }
   .link-list {
     padding-inline-start: 0;
     margin-left: -10px;
+  }
+  .projects {
+    margin: 0 -5px;
+  }
+  .project {
+    width: 47%;
+    padding: 0;
+    filter: none;
+    color: #222;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .portfolio .header-image {
+    background: none;
+  }
+  .projects {
+    margin: 0;
+  }
+  .project {
+    filter: none;
+    width: 100%;
   }
 }
 
