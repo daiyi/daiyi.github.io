@@ -221,7 +221,8 @@ h2+figure {
   vertical-align: top;
   width: 30%;
   padding: 5px;
-  filter: grayscale(100%) invert();
+  filter: grayscale(100%);
+  filter: invert();
   color: #9b9b9b;
   margin-bottom: 30px;
 }
