@@ -126,6 +126,7 @@ p {
 img {
   max-width: 100%;
   margin: 1em 0;
+  vertical-align: middle;
 }
 figure {
   margin: 1.5em 0 3em 0;
@@ -193,7 +194,7 @@ p + .link-list {
   border: none;
   color: #fff;
 }
-.link-list a:hover {
+.link-list a:hover, .blacklink:hover {
   color: #05EBB1;
 }
 
@@ -207,36 +208,17 @@ h2+figure {
 .portfolio .content .container {
   margin-bottom: 120px;
 }
+.portfolio-projects .content .container {
+  margin-bottom: 60px;
+}
 
 .footer a:link, .footer a:visited {
   color: #ccc;
   border-bottom: 1px #aaa dotted;
 }
 
-.projects {
-  margin: 0 -5px;
-}
-.project {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%;
-  padding: 5px;
-  -webkit-filter: invert(100%) grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: invert(invert 100%) grayscale(100%);
-  color: #bbb;
-  margin-bottom: 30px;
-}
-.project:hover {
-  filter: none;
-  color: #fff;
-  background: #222;
-  -webkit-box-shadow: 0px 0px 0px 10px #222;
-  -moz-box-shadow: 0px 0px 0px 10px #222;
-  box-shadow: 0px 0px 0px 10px #222;
-}
 .project img {
-  margin-top: 0;
-  display: block;
+  margin: 0;
 }
 .project p {
   line-height: 1.2em;
@@ -246,7 +228,7 @@ h2+figure {
   white-space: nowrap;
 }
 
-.image-links {
+.image-links, .projects {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -256,29 +238,48 @@ h2+figure {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: -5px;
+  margin: 0 -5px;
   margin-bottom: 60px;
 }
-.image-links div {
+.projects {
+  margin: 0 -10px; // note the difference (10px gutters)
+}
+.image-links div, .project-wrapper {
   -webkit-flex: 0 0 calc(100%/3);
   -ms-flex: 0 0 calc(100%/3);
   flex: 0 0 calc(100%/3);
   display: block;
 }
 .image-links div img {
-  display: block;
   margin: 0;
-  vertical-align: middle;
 }
+
 .image-links .image-link-item {
   margin: 20px 5px 0 5px;
 }
+.project {
+  -webkit-filter: invert(100%) grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: invert(invert 100%) grayscale(100%);
+  color: #bbb;
+  margin-bottom: 30px;
+  margin: 20px 10px 0 10px; // note the difference (10px gutters)
+}
+
 .image-link-item:hover {
   -webkit-filter: invert(100%) hue-rotate(280deg) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
   filter: invert(100%) hue-rotate(280deg) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
   -webkit-box-shadow: 0px 0px 0px 20px #fff;
   -moz-box-shadow: 0px 0px 0px 20px #fff;
   box-shadow: 0px 0px 0px 20px #fff;
+}
+.project:hover {
+/*.project {*/
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
+  color: #fff;
+  background: #222;
+  -webkit-box-shadow: 0px 0px 0px 15px #222;
+  -moz-box-shadow: 0px 0px 0px 15px #222;
+  box-shadow: 0px 0px 0px 15px #222;
 }
 .caption {
   background: #14ffce;
@@ -287,6 +288,7 @@ h2+figure {
   display: block;
   line-height: 1.5em;
 }
+
 
 @media (min-width: 450px) {
   .header-image {
@@ -313,33 +315,46 @@ h2+figure {
     padding-inline-start: 0;
     margin-left: -10px;
   }
-  .projects {
-    margin: 0 -5px;
-  }
-  .project {
-    width: 47%;
-    padding: 0;
-    filter: none;
-    color: #222;
-    margin-top: 30px;
-  }
   .image-links div {
     -webkit-flex: 0 0 calc(100%/2);
     -ms-flex: 0 0 calc(100%/2);
     flex: 0 0 calc(100%/2);
+  }
+  .project-wrapper {
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .project {
+    filter: none;
+    color: #444;
+    margin-bottom: 40px;
+  }
+  .project:hover {
+    filter: none;
+    color: #555;
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .portfolio-projects .content .container {
+    margin-bottom: 40px;
+  }
+  .projects {
+    margin: 0 -10px;
+  }
+  .portfolio-projects h2 {
+    font-size: 24px;
+  }
+  .portfolio-projects h1 {
+    font-size: 30px;
   }
 }
 
 @media (max-width: 450px) {
   .portfolio .header-image {
     background: none;
-  }
-  .projects {
-    margin: 0;
-  }
-  .project {
-    filter: none;
-    width: 100%;
   }
 }
 
