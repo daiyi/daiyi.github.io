@@ -20,6 +20,13 @@ body {
   margin: 0 20px;
   max-width: 700px;
 }
+.section {
+  margin: 30px 0;
+}
+.section p b {
+  margin-right: 15px;
+}
+
 .container-fluid {
   width: 100%;
   position: relative;
@@ -36,7 +43,7 @@ h1 {
   display: inline;
   padding: 5px 10px 0 10px;
 }
-h1.inverse {
+.inverse {
   color: #000;
   background: none;
 }
@@ -183,14 +190,14 @@ p + .link-list {
   display: block;
   padding-inline-start: 20px;
 }
-.link-list li, .blacklink {
+.link-list li, a.blacklink {
   background: #000;
   color: #999;
   display: inline-block;
   padding: 4px 10px 2px 10px;
   margin:  10px;
 }
-.link-list a {
+.link-list a, a.blacklink {
   border: none;
   color: #fff;
 }
