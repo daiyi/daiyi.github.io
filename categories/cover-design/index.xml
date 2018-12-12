@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cover design on daiyi</title>
+    <link>https://daiyi.co/portfolio/categories/cover-design/</link>
+    <description>Recent content in cover design on daiyi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 25 Feb 2018 23:30:00 +0600</lastBuildDate>
+    
+	<atom:link href="https://daiyi.co/portfolio/categories/cover-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>adventure log</title>
+      <link>https://daiyi.co/portfolio/illustration/cover-design/</link>
+      <pubDate>Sun, 25 Feb 2018 23:30:00 +0600</pubDate>
+      
+      <guid>https://daiyi.co/portfolio/illustration/cover-design/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
