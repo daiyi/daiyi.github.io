@@ -11,14 +11,14 @@ body {
 
 .page {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
 }
 
 .container {
   margin: 0 20px;
-  max-width: 700px;
+  max-width: 600px;
 }
 .section {
   margin: 30px 0;
@@ -38,10 +38,8 @@ body {
 
 h1 {
   font-size: 45px;
-  color: #fff;
-  background: #000;
+  color: #000;
   display: inline;
-  padding: 5px 10px 0 10px;
 }
 .inverse {
   color: #000;
@@ -50,8 +48,9 @@ h1 {
 h1 small {
   font-size: 20px;
 }
-h1 a:link, h1 a:visited, h1 a:hover {
-  color: #fff;
+h1 a:link,
+h1 a:visited,
+h1 a:hover {
   border: none;
 }
 
@@ -59,10 +58,14 @@ h2 {
   font-size: 20px;
 }
 
+h3 {
+  display: inline;
+}
+
 h4 {
   font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: .4em;
+  letter-spacing: 0.4em;
   color: #888;
 }
 .subtitle-inline {
@@ -73,7 +76,6 @@ h4 {
 
 .header {
   display: flex;
-  align-self: flex-start;
   width: 100%;
 }
 .header-image {
@@ -81,10 +83,11 @@ h4 {
   position: absolute;
   top: 0px;
   height: 240px; /* height of bg image */
-  background-image: url('./octoswirl_xs.png');
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: auto;
+  mask-image: url("./octoswirl.png");
+  background: linear-gradient(#088bb3, #ff3983);
+  background-repeat: none;
+  mask-repeat: no-repeat;
+  mask-position: top center;
   z-index: -1;
 }
 .header-content {
@@ -95,7 +98,6 @@ h4 {
   margin-left: 20px;
 }
 
-
 .content {
   margin-bottom: 100px;
 }
@@ -104,7 +106,7 @@ h4 {
   background-color: #000;
   color: #999;
   width: 100%;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .footer-image {
@@ -114,7 +116,7 @@ h4 {
   margin: 0;
   height: 400px;
   width: 100%;
-  background-image: url('./octofoot_sm.png');
+  background-image: url("./octofoot_sm.png");
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: auto;
@@ -122,7 +124,7 @@ h4 {
 }
 @media (min-width: 800px) {
   .footer-image {
-    background-image: url('./octofoot.png');
+    background-image: url("./octofoot.png");
   }
 }
 
@@ -157,7 +159,8 @@ figcaption {
 a {
   text-decoration: none;
 }
-a:link, a:visited {
+a:link,
+a:visited {
   color: #333;
   border-bottom: 1px #333 dotted;
 }
@@ -190,22 +193,25 @@ p + .link-list {
   display: block;
   padding-inline-start: 20px;
 }
-.link-list li, a.blacklink {
+.link-list li,
+a.blacklink {
   background: #000;
   color: #999;
   display: inline-block;
   padding: 4px 10px 2px 10px;
-  margin:  10px;
+  margin: 10px;
 }
-.link-list a, a.blacklink {
+.link-list a,
+a.blacklink {
   border: none;
   color: #fff;
 }
-.link-list a:hover, .blacklink:hover {
-  color: #05EBB1;
+.link-list a:hover,
+.blacklink:hover {
+  color: #05ebb1;
 }
 
-h2+figure {
+h2 + figure {
   margin-top: 20px;
 }
 
@@ -219,7 +225,8 @@ h2+figure {
   margin-bottom: 60px;
 }
 
-.footer a:link, .footer a:visited {
+.footer a:link,
+.footer a:visited {
   color: #ccc;
   border-bottom: 1px #aaa dotted;
 }
@@ -235,7 +242,8 @@ h2+figure {
   white-space: nowrap;
 }
 
-.image-links, .projects {
+.image-links,
+.projects {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -249,12 +257,13 @@ h2+figure {
   margin-bottom: 60px;
 }
 .projects {
-  margin: 0 -10px; // note the difference (10px gutters)
+  margin: 0 -10px; /* note the difference (10px gutters) */
 }
-.image-links div, .project-wrapper {
-  -webkit-flex: 0 0 calc(100%/3);
-  -ms-flex: 0 0 calc(100%/3);
-  flex: 0 0 calc(100%/3);
+.image-links div,
+.project-wrapper {
+  -webkit-flex: 0 0 calc(100% / 3);
+  -ms-flex: 0 0 calc(100% / 3);
+  flex: 0 0 calc(100% / 3);
   display: block;
 }
 .image-links div img {
@@ -269,18 +278,20 @@ h2+figure {
   filter: invert(invert 100%) grayscale(100%);
   color: #bbb;
   margin-bottom: 30px;
-  margin: 20px 10px 0 10px; // note the difference (10px gutters)
+  margin: 20px 10px 0 10px; /* note the difference (10px gutters) */
 }
 
 .image-link-item:hover {
-  -webkit-filter: invert(100%) hue-rotate(280deg) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
-  filter: invert(100%) hue-rotate(280deg) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
+  -webkit-filter: invert(100%) hue-rotate(280deg)
+    drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
+  filter: invert(100%) hue-rotate(280deg)
+    drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
   -webkit-box-shadow: 0px 0px 0px 20px #fff;
   -moz-box-shadow: 0px 0px 0px 20px #fff;
   box-shadow: 0px 0px 0px 20px #fff;
 }
 .project:hover {
-/*.project {*/
+  /*.project {*/
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
   color: #fff;
   background: #222;
@@ -296,11 +307,10 @@ h2+figure {
   line-height: 1.5em;
 }
 
-
 @media (min-width: 450px) {
   .header-image {
     height: 300px; /* height of bg image */
-    background-image: url('./octoswirl_sm.png');
+    mask-image: url("./octoswirl_sm.png");
   }
   .header-content {
     margin-top: 120px;
@@ -323,9 +333,9 @@ h2+figure {
     margin-left: -10px;
   }
   .image-links div {
-    -webkit-flex: 0 0 calc(100%/2);
-    -ms-flex: 0 0 calc(100%/2);
-    flex: 0 0 calc(100%/2);
+    -webkit-flex: 0 0 calc(100% / 2);
+    -ms-flex: 0 0 calc(100% / 2);
+    flex: 0 0 calc(100% / 2);
   }
   .project-wrapper {
     -webkit-flex: 0 0 100%;
@@ -374,11 +384,15 @@ h2+figure {
 @media (min-width: 800px) {
   .header-image {
     height: 530px; /* height of bg image */
-    background-image: url('./octoswirl.png');
+    mask-image: url("./octoswirl.png");
+    background: linear-gradient(#088bb3, #ff3983);
+    mask-repeat: no-repeat;
+    mask-position: top center;
   }
   .header-content {
     margin: auto;
-    margin-top: 220px;
+    margin-top: 150px;
+    margin-bottom: 20px;
     width: auto;
   }
   h2 {
@@ -386,6 +400,6 @@ h2+figure {
   }
 
   .container {
-    width: 700px;
+    width: 600px;
   }
 }
