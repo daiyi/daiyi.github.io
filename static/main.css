@@ -368,7 +368,7 @@ h2 + figure {
 
 @media (max-width: 900px) {
   .header-image {
-    height: 300px; /* height of bg image */
+    height: 360px; /* height of bg image */
     background: linear-gradient(#088bb3, #ff3983);
     -webkit-mask-image: url("./octoswirl_sm.png");
     mask-image: url("./octoswirl_sm.png");
@@ -376,8 +376,8 @@ h2 + figure {
     mask-position: top center;
   }
   .header-content {
-    margin-top: 80px;
-    margin-bottom: 20px;
+    margin-top: 90px;
+    margin-bottom: 30px;
     display: flex;
     padding: 0 210px;
   }
