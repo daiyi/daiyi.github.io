@@ -75,27 +75,34 @@ h4 {
 }
 
 .header {
-  display: flex;
   width: 100%;
 }
 .header-image {
   width: 100%;
   position: absolute;
   top: 0px;
-  height: 240px; /* height of bg image */
+  height: 510px; /* height of bg image */
+  -webkit-mask-image: url("./octoswirl.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: top center;
   mask-image: url("./octoswirl.png");
-  background: linear-gradient(#088bb3, #ff3983);
-  background-repeat: none;
   mask-repeat: no-repeat;
   mask-position: top center;
+  background: linear-gradient(#088bb3, #ff3983);
+  background-repeat: none;
   z-index: -1;
 }
 .header-content {
-  margin: auto;
-  margin-top: 20px;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 .header-content h1 {
   margin-left: 20px;
+}
+.header-content .container {
+  flex: 1 0 auto;
 }
 
 .content {
@@ -180,10 +187,10 @@ a.button {
 a.button:hover {
   border: 3px #000 solid;
 }
-
+/* 
 .portfolio .link-list {
   padding-inline-start: 0;
-}
+} */
 
 p + .link-list {
   margin-top: -10px;
@@ -215,7 +222,7 @@ h2 + figure {
   margin-top: 20px;
 }
 
-.portfolio .content {
+/* .portfolio .content {
   margin-top: 50px;
 }
 .portfolio .content .container {
@@ -223,7 +230,7 @@ h2 + figure {
 }
 .portfolio-projects .content .container {
   margin-bottom: 60px;
-}
+} */
 
 .footer a:link,
 .footer a:visited {
@@ -307,17 +314,7 @@ h2 + figure {
   line-height: 1.5em;
 }
 
-@media (min-width: 450px) {
-  .header-image {
-    height: 300px; /* height of bg image */
-    mask-image: url("./octoswirl_sm.png");
-  }
-  .header-content {
-    margin-top: 120px;
-  }
-}
-
-@media (max-width: 580px) {
+/* @media (max-width: 580px) {
   .portfolio p {
     font-size: 14px;
     line-height: 1.3em;
@@ -367,39 +364,56 @@ h2 + figure {
   .portfolio-projects h1 {
     font-size: 30px;
   }
-}
+} */
 
-@media (max-width: 450px) {
-  .portfolio .header-image {
-    background: none;
-  }
-}
-
-@media (min-width: 580px) {
-  .header-content {
-    width: 520px;
-  }
-}
-
-@media (min-width: 800px) {
+@media (max-width: 900px) {
   .header-image {
-    height: 530px; /* height of bg image */
-    mask-image: url("./octoswirl.png");
+    height: 300px; /* height of bg image */
     background: linear-gradient(#088bb3, #ff3983);
+    -webkit-mask-image: url("./octoswirl_sm.png");
+    mask-image: url("./octoswirl_sm.png");
     mask-repeat: no-repeat;
     mask-position: top center;
   }
   .header-content {
-    margin: auto;
-    margin-top: 150px;
+    margin-top: 80px;
     margin-bottom: 20px;
-    width: auto;
+    display: flex;
+    padding: 0 210px;
+  }
+  .header-content .container {
+    width: 400px;
+    flex: 1 1 auto;
   }
   h2 {
     font-size: 28px;
   }
-
   .container {
-    width: 600px;
+    width: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-image {
+    height: 250px; /* height of bg image */
+    -webkit-mask-image: url("./octoswirl_xs.png");
+    mask-image: url("./octoswirl_xs.png");
+  }
+  .header-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: auto;
+    padding: 0;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .header-content .container {
+    margin-top: 40px;
+    width: 100%;
+    /* margin-right: 15%; */
+  }
+  .container {
+    width: auto;
   }
 }
