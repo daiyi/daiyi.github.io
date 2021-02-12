@@ -114,6 +114,7 @@ h4 {
   color: #999;
   width: 100%;
   font-size: 0.9em;
+  flex: 1 1 auto;
 }
 
 .footer-image {
